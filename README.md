@@ -14,51 +14,34 @@ _Useful tips when navigating through your repository._
 </header>
 
 <!--
-  <<< Author notes: Course start >>>
-  Include start button, a note about Actions minutes,
-  and tell the learner why they should take the course.
+  <<< Author notes: Step 1 >>>
+  Choose 3-5 steps for your course.
+  The first step is always the hardest, so pick something easy!
+  Link to docs.github.com for further explanations.
+  Encourage users to open new tabs for steps!
 -->
 
-## Welcome
+## Step 1: Resolve duplicate issues
 
-Have you ever worked in a repository with a lot of history? Perhaps you've had to track down related issues and pull requests in the past, or you've had to find who committed a particular change. If you've ever found yourself in any of these situations, you'll know how important it is to navigate your workspace.
+_Welcome to the course :tada:_
 
-- **Who is this for**: Developers, GitHub users, users new to Git, students, managers, and teams.
-- **What you'll learn**:
-  - Find relevant issues and pull requests.
-  - Search history to find context.
-  - Make connections within GitHub to help others find things.
-- **What you'll build**: Repository with existing commits, duplicated issues, and a content defect to be fixed.
-- **Prerequisites**: Before you take this course, you may want to go through the [GitHub Quickstart](https://docs.github.com/en/get-started/quickstart) introduction on GitHub Docs and [Introduction to GitHub](https://github.com/skills/introduction-to-github) course on GitHub Skills.
-- **How long**: This course takes less than 15 min to complete.
+GitHub has special capabilities to help reference other information on GitHub. For example, when you reference another issue or pull request by number, that number will be hyperlinked. At the same time, a cross-reference is created in the linked issue or pull request. This two-way reference helps people track the relationship of information across GitHub.
 
-In this course, you will:
+![a screenshot of an issue linking to a PR, and a PR with a cross-reference to the issue](https://user-images.githubusercontent.com/6351798/172456846-2daec570-08b0-4ffa-a7cb-41acc50b836e.png)
 
-1. Resolve a duplicate issue.
-2. Find a commit in history.
-3. Fix a broken sidebar.
+With collaboraration from multiple team members, sometimes issues can be duplicated. In the above example, the new issue `#8346` is a duplicate of a previous issue `#8249`. The cross-reference ability allows you to track these duplications and close issues when appropriate.
 
-### How to start this course
+### Creating references
 
-<!-- For start course, run in JavaScript:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'skills',
-  template_name: 'connect-the-dots',
-  owner: '@me',
-  name: 'skills-connect-the-dots',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
+When you link to another issue, a reference within GitHub is automatically created. In fact, you don't even need to include the full link. If you were to type `#5` within a comment, that would turn into a link to issue or pull request number 5.
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=connect-the-dots&owner=%40me&name=skills-connect-the-dots&description=My+clone+repository&visibility=public)
+When you want to create a crosslink, start typing the title of an issue or pull request directly after you type the `#` symbol. GitHub will suggest issues or pull requests that will link to the right place. To learn even more, check out the [Autolinked References and URLs](https://docs.github.com/en/articles/autolinked-references-and-urls) article.
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+### :keyboard: Activity: Find and close the cross-linked issue
+
+1. Navigate to the issue #1 (Welcome)
+2. Type "Duplicate of #2" as a comment and close issue #1
+3. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
 <footer>
 
