@@ -14,34 +14,38 @@ _Useful tips when navigating through your repository._
 </header>
 
 <!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
 -->
 
-## Step 1: Resolve duplicate issues
+## Step 2: Find a commit in history
 
-_Welcome to the course :tada:_
+_Thanks for the duplicate note :wave:_
 
-GitHub has special capabilities to help reference other information on GitHub. For example, when you reference another issue or pull request by number, that number will be hyperlinked. At the same time, a cross-reference is created in the linked issue or pull request. This two-way reference helps people track the relationship of information across GitHub.
+An important part of version control is the ability to look into the past. By using `git blame`, and finding the story behind a commit, we're able to do more than _blame_ people for code. We're able to see the story around why a commit was made. What is the associated pull request? Who approved the pull request? What tests were run on that commit before it was merged?
 
-![a screenshot of an issue linking to a PR, and a PR with a cross-reference to the issue](https://user-images.githubusercontent.com/6351798/172456846-2daec570-08b0-4ffa-a7cb-41acc50b836e.png)
+The obvious reason to find things in history is to know about the history. With issues and pull requests, we see a more complete story about the history, not just the bare minimum.
 
-With collaboraration from multiple team members, sometimes issues can be duplicated. In the above example, the new issue `#8346` is a duplicate of a previous issue `#8249`. The cross-reference ability allows you to track these duplications and close issues when appropriate.
+### What's `git blame`?
 
-### Creating references
+`git blame` is a Git functionality that shows what revision and author last modified each line of a file. Information like who made a commit, when, and even why can be found this way. If you aren't sure who introduced certain changes to a file, you can use `git blame` to find out. While `git blame` sounds rather accusatory, this can be used to understand the context around decisions.
 
-When you link to another issue, a reference within GitHub is automatically created. In fact, you don't even need to include the full link. If you were to type `#5` within a comment, that would turn into a link to issue or pull request number 5.
+### What's a Secure Hash Algorithm (SHA)?
 
-When you want to create a crosslink, start typing the title of an issue or pull request directly after you type the `#` symbol. GitHub will suggest issues or pull requests that will link to the right place. To learn even more, check out the [Autolinked References and URLs](https://docs.github.com/en/articles/autolinked-references-and-urls) article.
+A SHA is a reference to a specific object. In this case, it's a reference to a commit. On GitHub, you can look at a specific commit to see the changes introduced, by whom, and if they were a part of a pull request.
 
-### :keyboard: Activity: Find and close the cross-linked issue
+### :keyboard: Activity: Find commit in history
 
-1. Navigate to the issue #1 (Welcome)
-2. Type "Duplicate of #2" as a comment and close issue #1
-3. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+1. Navigate to the Code tab of your repository
+   - _Tip: you may have previously created your repository in a new tab_
+2. Click `docs` to navigate into the `/docs` directory
+3. Click `_sidebar.md` to view the file
+4. On the top of the file, click **Blame** to see the details of the most recent revision
+5. Click the commit message, `add sidebar to documentation` to see the commit details
+6. Copy the first seven characters of the SHA (the first 7 characters of the 40 character hexadecimal string listed after `commit`)
+7. Comment on issue #2 by adding the SHA from step 6 as a comment text and click on "Comment" button
+8. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
 <footer>
 
