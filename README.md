@@ -14,38 +14,44 @@ _Useful tips when navigating through your repository._
 </header>
 
 <!--
-  <<< Author notes: Step 2 >>>
+  <<< Author notes: Step 3 >>>
   Start this step by acknowledging the previous step.
   Define terms and link to docs.github.com.
 -->
 
-## Step 2: Find a commit in history
+## Step 3: Fix a broken sidebar
 
-_Thanks for the duplicate note :wave:_
+_Great job finding that commit :heart:_
 
-An important part of version control is the ability to look into the past. By using `git blame`, and finding the story behind a commit, we're able to do more than _blame_ people for code. We're able to see the story around why a commit was made. What is the associated pull request? Who approved the pull request? What tests were run on that commit before it was merged?
+Thanks for finding that commit! We now know that the sidebar was indeed added, and it was done in that commit. Let's see if we can dig a little deeper to find out if any planning or conversation, using comments, occurred around this change.
 
-The obvious reason to find things in history is to know about the history. With issues and pull requests, we see a more complete story about the history, not just the bare minimum.
+As we've already seen, conversations in issues and pull requests can reference other work, but the amount of context goes much further than crosslinks. Remember, Git is version control! For example, the commit that you found in the last step is connected with much more information such as:
 
-### What's `git blame`?
+- Who made the commit.
+- What other changes were included.
+- When the commit was made.
+- Which pull request the commit was a part of.
 
-`git blame` is a Git functionality that shows what revision and author last modified each line of a file. Information like who made a commit, when, and even why can be found this way. If you aren't sure who introduced certain changes to a file, you can use `git blame` to find out. While `git blame` sounds rather accusatory, this can be used to understand the context around decisions.
+The pull request is important because it goes beyond knowing when a commit happened. You can know _why_ a commit happened. Finding history is not about _blaming_ anyone, but about seeing the bigger picture. Why were decisions made? Who was involved? What were the build outputs and test results for each commit? Who requested changes, and who approved them?
 
-### What's a Secure Hash Algorithm (SHA)?
+### Finding a pull request from a commit
 
-A SHA is a reference to a specific object. In this case, it's a reference to a commit. On GitHub, you can look at a specific commit to see the changes introduced, by whom, and if they were a part of a pull request.
+When you're looking at a commit on GitHub, you can see a lot of information. From this view, you can also find a link to the pull request in which the commit was created. We'll use this in the next step.
 
-### :keyboard: Activity: Find commit in history
+![screenshot of a view of a commit on GitHub, highlighting the link to the pull request](https://user-images.githubusercontent.com/16547949/67341250-3edbb480-f4fd-11e9-805a-6bce5a8ba2d1.png)
 
-1. Navigate to the Code tab of your repository
-   - _Tip: you may have previously created your repository in a new tab_
-2. Click `docs` to navigate into the `/docs` directory
-3. Click `_sidebar.md` to view the file
-4. On the top of the file, click **Blame** to see the details of the most recent revision
-5. Click the commit message, `add sidebar to documentation` to see the commit details
-6. Copy the first seven characters of the SHA (the first 7 characters of the 40 character hexadecimal string listed after `commit`)
-7. Comment on issue #2 by adding the SHA from step 6 as a comment text and click on "Comment" button
-8. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+### :keyboard: Activity: Fix a broken sidebar
+
+1. In the main branch [Edit the `docs/_sidebar.md` file](/docs/_sidebar.md).
+2. Correct the spelling of the reference `(doc-references__.md)` on line 4 by changing it into `(doc-references.md)`.
+3. Select or create a new branch `fix-sidebar` for this commit and start a pull request.
+4. Make sure that **main** is selected for **base:** and **fix-sidebar** for **compare:**.
+5. Using the **Assignees** section on the right side, assign yourself to the pull request.
+6. In the PR comment add 'Closes #2' and autolink issue #2.
+7. Click **Create pull request** and wait about 20 seconds.
+8. Merge this pull request.
+9. Delete the branch 'fix-sidebar'.
+10. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
 <footer>
 
